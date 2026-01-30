@@ -163,28 +163,40 @@ body {
   align-items: center;
 }
 
+/* Base pill look for both links and button */
 .nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: #4b5563;
   text-decoration: none;
   padding: 0.45rem 0.85rem;
   border-radius: 999px;
   position: relative;
   overflow: hidden;
+  border: none;
+  background: transparent;
+  cursor: pointer;
   transition: color 0.2s ease, background 0.2s ease, transform 0.15s ease;
 }
 
-/* Register button styled like pill */
+/* Register button: real background + color */
 .nav-register-btn {
-  border: 1px solid rgba(34, 197, 94, 0.9);
-  background: linear-gradient(135deg, #22c55e, #16a34a);
-  color: #ecfdf5;
-  cursor: pointer;
+  background: linear-gradient(135deg, #22c55e, #16a34a) !important;
+  border: 1px solid rgba(34, 197, 94, 0.9) !important;
+  color: #ecfdf5 !important;
+}
+
+/* No overlay for button */
+.nav-register-btn::before {
+  display: none !important;
 }
 
 .nav-register-btn:hover {
   transform: translateY(-1px);
 }
 
+/* Overlay and hover only for anchor links */
 .nav-link::before {
   content: "";
   position: absolute;
@@ -194,12 +206,12 @@ body {
   transition: opacity 0.2s ease;
 }
 
-.nav-link:hover {
+a.nav-link:hover {
   color: #0f172a;
   transform: translateY(-1px);
 }
 
-.nav-link:hover::before {
+a.nav-link:hover::before {
   opacity: 0.5;
 }
 
@@ -216,7 +228,7 @@ main {
   padding: 1.5rem 1.25rem 3.5rem;
 }
 
-/* HERO: no white box, only text centered */
+/* HERO: no box, only text centered */
 .hero {
   display: flex;
   align-items: center;
@@ -545,7 +557,7 @@ main {
   color: #1d4ed8;
 }
 
-/* Day pages layout */
+/* Day pages layout (same CSS you already use) */
 .day-main {
   margin-top: 1.2rem;
 }
@@ -565,138 +577,4 @@ main {
 }
 
 .day-label {
-  font-size: 0.75rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #4f46e5;
-}
-
-.day-title {
-  margin-top: 0.5rem;
-  font-size: clamp(1.7rem, 3vw, 2rem);
-  color: #020617;
-}
-
-.day-desc {
-  margin-top: 0.4rem;
-  font-size: 0.9rem;
-  color: #374151;
-  max-width: 32rem;
-}
-
-.day-hero-cta {
-  text-align: right;
-}
-
-.events-section {
-  margin-top: 2.2rem;
-}
-
-.events-grid {
-  margin-top: 1rem;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.event-card {
-  border-radius: 1rem;
-  padding: 1rem;
-  background: rgba(248, 250, 252, 0.98);
-  border: 1px solid rgba(148, 163, 184, 0.7);
-  box-shadow: 0 18px 44px rgba(148, 163, 184, 0.5);
-  font-size: 0.9rem;
-  color: #111827;
-  position: relative;
-  overflow: hidden;
-}
-
-.event-card.highlight {
-  background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), rgba(248, 250, 252, 0.98));
-  border-color: rgba(129, 140, 248, 0.9);
-}
-
-.event-card h4 {
-  font-size: 0.95rem;
-  margin-bottom: 0.35rem;
-}
-
-.event-card p {
-  font-size: 0.88rem;
-  color: #374151;
-}
-
-/* Footer */
-.site-footer {
-  border-top: 1px solid rgba(148, 163, 184, 0.7);
-  padding: 1rem 1.25rem 1.4rem;
-  text-align: center;
-  font-size: 0.8rem;
-  color: #6b7280;
-  background: var(--frame-bg);
-}
-
-.footer-note {
-  margin-top: 0.25rem;
-  color: #9ca3af;
-}
-
-/* Simple tilt effect */
-[data-tilt] {
-  will-change: transform;
-}
-
-/* Responsive */
-@media (max-width: 960px) {
-  .days-grid,
-  .events-grid,
-  .coord-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .main-nav {
-    align-self: stretch;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-  }
-
-  .day-hero {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .day-hero-cta {
-    text-align: left;
-  }
-}
-
-@media (max-width: 640px) {
-  main {
-    padding-inline: 1rem;
-  }
-
-  .hero,
-  .day-hero {
-    padding: 1rem 0.9rem;
-  }
-
-  .days-grid,
-  .events-grid,
-  .coord-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .college-name {
-    font-size: 0.8rem;
-  }
-
-  .logo-circle {
-    width: 34px;
-    height: 34px;
-  }
-}
+  font-
