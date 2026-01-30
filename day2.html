@@ -12,9 +12,20 @@
     <span></span><span></span><span></span><span></span>
   </div>
 
+  <!-- Top-right navigation -->
+  <div class="top-right-nav">
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="day1.html" class="nav-link">Day 1</a>
+      <a href="day2.html" class="nav-link active">Day 2</a>
+      <a href="day3.html" class="nav-link">Day 3</a>
+    </nav>
+  </div>
+
+  <!-- Centered header -->
   <header class="site-header">
     <div class="header-inner">
-      <div class="header-top-row">
+      <div class="header-row">
         <div class="header-logo-circle">
           <img src="images/MCE_tab.png" alt="Mangayarkarasi Logo Left" />
         </div>
@@ -28,37 +39,22 @@
           <img src="images/MGI_LOGO.png" alt="MGI Logo Right" />
         </div>
       </div>
-
-      <div class="header-bottom-row">
-        <nav class="main-nav">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="day1.html" class="nav-link">Day 1</a>
-          <a href="day2.html" class="nav-link active">Day 2</a>
-          <a href="day3.html" class="nav-link">Day 3</a>
-          <button
-            class="nav-link nav-register-btn"
-            type="button"
-            onclick="openRegistration('day2')"
-          >
-            Register
-          </button>
-        </nav>
-      </div>
     </div>
   </header>
 
   <main class="day-main">
     <section class="day-hero">
-      <div>
+      <div class="hero-content">
         <p class="day-label">Day 2 · 11.02.2026</p>
         <h2 class="day-title">Code. Quiz. Curiosity.</h2>
         <p class="day-desc">
           Day 2 focuses on competitive programming, rapid-fire quizzing, and a seminar that challenges how you think.
         </p>
       </div>
-      <div class="day-hero-cta">
+      <div class="day-hero-actions">
         <button
           class="btn btn-primary pulse"
+          type="button"
           onclick="openRegistration('day2')"
         >
           Register
