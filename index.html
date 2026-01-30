@@ -42,8 +42,22 @@
     </div>
   </header>
 
+  <!-- Three-dot menu below header -->
+  <div class="dot-menu-wrapper">
+    <button class="dot-menu-button" type="button" onclick="toggleDotMenu('home-dot-menu')">
+      <div class="dot-menu-icon">
+        <span></span><span></span><span></span>
+      </div>
+      <div id="home-dot-menu" class="dot-dropdown">
+        <a href="index.html">Home</a>
+        <a href="day1.html">Day 1</a>
+        <a href="day2.html">Day 2</a>
+        <a href="day3.html">Day 3</a>
+      </div>
+    </button>
+  </div>
+
   <main>
-    <!-- HERO with centered Register button -->
     <section class="hero">
       <div class="hero-content">
         <div class="hero-badge">A THREE DAY TECHNICAL CARNIVAL</div>
@@ -64,7 +78,6 @@
       </div>
     </section>
 
-    <!-- DAYS SECTION -->
     <section class="days-section">
       <h3 class="section-title">Event Schedule</h3>
       <div class="days-grid">
@@ -108,7 +121,6 @@
       </div>
     </section>
 
-    <!-- COORDINATORS -->
     <section class="coord-section">
       <h3 class="section-title">Co-ordinators</h3>
       <div class="coord-grid">
