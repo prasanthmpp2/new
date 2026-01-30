@@ -12,9 +12,20 @@
     <span></span><span></span><span></span><span></span>
   </div>
 
+  <!-- Top-right navigation -->
+  <div class="top-right-nav">
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="day1.html" class="nav-link">Day 1</a>
+      <a href="day2.html" class="nav-link">Day 2</a>
+      <a href="day3.html" class="nav-link">Day 3</a>
+    </nav>
+  </div>
+
+  <!-- Centered header: logo + text + logo -->
   <header class="site-header">
     <div class="header-inner">
-      <div class="header-top-row">
+      <div class="header-row">
         <div class="header-logo-circle">
           <img src="images/MCE_tab.png" alt="Mangayarkarasi Logo Left" />
         </div>
@@ -28,40 +39,28 @@
           <img src="images/MGI_LOGO.png" alt="MGI Logo Right" />
         </div>
       </div>
-
-      <div class="header-bottom-row">
-        <nav class="main-nav">
-          <a href="index.html" class="nav-link active">Home</a>
-          <a href="day1.html" class="nav-link">Day 1</a>
-          <a href="day2.html" class="nav-link">Day 2</a>
-          <a href="day3.html" class="nav-link">Day 3</a>
-          <button
-            class="nav-link nav-register-btn"
-            type="button"
-            onclick="openRegistration('home')"
-          >
-            Register
-          </button>
-        </nav>
-      </div>
     </div>
   </header>
 
   <main>
-    <!-- your existing main content, unchanged -->
-    <!-- HERO -->
-    <section class="hero hero-centered">
+    <!-- HERO with centered Register button -->
+    <section class="hero">
       <div class="hero-content">
-        <h2></h2>
         <div class="hero-badge">A THREE DAY TECHNICAL CARNIVAL</div>
-        </h2>
         <h2 class="hero-title glitch" data-text="QEVRA Fest ‘26">
           QEVRA Fest ‘26
         </h2>
-        <h3>
         <p class="hero-tagline">Innovate · Compete · Elevate</p>
-        <p class="hero-dates">10 – 12 February 2026</p>
-          </h3>
+        <p class="hero-dates">10 – 12 February 2026 · Mangayarkarasi College of Engineering</p>
+      </div>
+      <div class="hero-actions">
+        <button
+          class="btn btn-primary pulse"
+          type="button"
+          onclick="openRegistration('home')"
+        >
+          Register
+        </button>
       </div>
     </section>
 
