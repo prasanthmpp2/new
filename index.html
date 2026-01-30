@@ -1,122 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Portfolio UI Layout</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/image/logo.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/image/logo.png">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <title>QEVRA Fest '26 | Mangayarkarasi College of Engineering</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="theme-dark">
+  <!-- Animated background -->
+  <div class="bg-orbit">
+    <span></span><span></span><span></span><span></span>
+  </div>
 
-        :root {
-            --primary: #6366f1;
-            --primary-dark: #4f46e5;
-            --text-dark: #1e293b;
-            --text-light: #64748b;
-            --bg-light: #f8fafc;
-            --white: #ffffff;
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-block">
+        <div class="logo-circle logo-left">MC</div>
+        <div class="header-text">
+          <h1 class="college-name">MANGAYARKARASI COLLEGE OF ENGINEERING</h1>
+          <p class="dept-name">Department of CSE and AIML</p>
+        </div>
+        <div class="logo-circle logo-right">QF</div>
+      </div>
 
-        html { font-size: 16px; }
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="day1.html" class="nav-link">Day 1</a>
+        <a href="day2.html" class="nav-link">Day 2</a>
+        <a href="day3.html" class="nav-link">Day 3</a>
+      </nav>
+    </div>
+  </header>
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            scroll-behavior: smooth;
-            overflow-x: hidden;
-        }
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-badge">A THREE DAY TECHNICAL CARNIVAL</div>
+        <h2 class="hero-title glitch" data-text="QEVRA Fest ‘26">
+          QEVRA Fest ‘26
+        </h2>
+        <p class="hero-tagline">Innovate · Compete · Elevate</p>
+        <p class="hero-dates">10 – 12 February 2026 · Mangayarkarasi College of Engineering</p>
 
-        body.dark-theme {
-            --text-dark: #f8fafc;
-            --text-light: #cbd5e1;
-            --bg-light: #1e293b;
-            --white: #0f172a;
-        }
+        <div class="hero-cta-row">
+          <a href="day1.html" class="btn btn-primary">View Day 1</a>
+          <a href="day2.html" class="btn btn-outline">View Day 2</a>
+          <a href="day3.html" class="btn btn-outline">View Day 3</a>
+        </div>
+      </div>
 
-        /* Animated Background */
-        #particles-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
+      <div class="hero-orbit-card">
+        <div class="orbit-ring ring-1"></div>
+        <div class="orbit-ring ring-2"></div>
+        <div class="orbit-ring ring-3"></div>
+        <div class="orbit-core">
+          <span>QEVRA</span>
+          <small>26</small>
+        </div>
+        <div class="orbit-label orbit-label-1">Code</div>
+        <div class="orbit-label orbit-label-2">Design</div>
+        <div class="orbit-label orbit-label-3">Research</div>
+      </div>
+    </section>
 
-        body.dark-theme #particles-canvas {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-        }
+    <!-- Days list -->
+    <section class="days-section">
+      <h3 class="section-title">Event Schedule</h3>
+      <div class="days-grid">
+        <article class="day-card" data-tilt>
+          <h4>Day 1 · 10.02.2026</h4>
+          <p class="day-subtitle">Kick-off with ideas, design, and exploration.</p>
+          <ul class="event-list">
+            <li><span class="event-name">Paper Presentation</span><span class="event-code">Xynapse</span></li>
+            <li><span class="event-name">UI &amp; UX Contest</span><span class="event-code">Framux</span></li>
+            <li><span class="event-name">Poster Presentation</span><span class="event-code">AURA Post</span></li>
+            <li><span class="event-name">Seminar</span><span class="event-code">XPlore</span></li>
+          </ul>
+          <div class="card-actions">
+            <a href="day1.html" class="btn btn-card">View Day 1 Details</a>
+          </div>
+        </article>
 
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            padding: 0.75rem 0;
-            transition: all 0.3s ease;
-        }
+        <article class="day-card" data-tilt>
+          <h4>Day 2 · 11.02.2026</h4>
+          <p class="day-subtitle">Battle of logic, speed, and knowledge.</p>
+          <ul class="event-list">
+            <li><span class="event-name">Coding Contest</span><span class="event-code">Code Fest</span></li>
+            <li><span class="event-name">Quiz</span><span class="event-code">QuizTrix</span></li>
+            <li><span class="event-name">Seminar</span><span class="event-code">Brain X</span></li>
+          </ul>
+          <div class="card-actions">
+            <a href="day2.html" class="btn btn-card">View Day 2 Details</a>
+          </div>
+        </article>
 
-        body.dark-theme nav { background: rgba(15, 23, 42, 0.95); }
+        <article class="day-card" data-tilt>
+          <h4>Day 3 · 12.02.2026</h4>
+          <p class="day-subtitle">All-night innovation showdown.</p>
+          <ul class="event-list">
+            <li><span class="event-name">Hackathon</span><span class="event-code">Hack Fest</span></li>
+          </ul>
+          <div class="card-actions">
+            <a href="day3.html" class="btn btn-card">View Day 3 Details</a>
+          </div>
+        </article>
+      </div>
+    </section>
 
-        nav .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    <!-- Student & staff details -->
+    <section class="coord-section">
+      <h3 class="section-title">Co-ordinators</h3>
+      <div class="coord-grid">
+        <div class="coord-column">
+          <h4>Student Co-ordinators</h4>
+          <div class="coord-card">
+            <p class="coord-name">V Sridhar</p>
+            <p class="coord-meta">3rd year CSE</p>
+            <p class="coord-contact">📞 7094220646</p>
+          </div>
+          <div class="coord-card">
+            <p class="coord-name">S Surya Sri</p>
+            <p class="coord-meta">3rd year AIML</p>
+            <p class="coord-contact">📞 9384459911</p>
+          </div>
+        </div>
 
-        nav .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
+        <div class="coord-column">
+          <h4>Staff Co-ordinators</h4>
+          <div class="coord-card">
+            <p class="coord-name">To be announced</p>
+            <p class="coord-meta">Department of CSE</p>
+          </div>
+          <div class="coord-card">
+            <p class="coord-name">To be announced</p>
+            <p class="coord-meta">Department of AIML</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-        nav .logo:hover { transform: scale(1.05); }
-
-        nav .logo-img {
-            width: 40px;
-            height: 40px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-
-        nav .logo-text {
-            font-size: 1.25rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--primary), #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        nav ul {
-            list-style: none;
-            display: none;
-            flex-direction: column;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.98);
-            padding: 1rem;
-            box-shadow: 0 10px 20px
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>© 2026 QEVRA Fest ‘26 · Department of CSE &amp; AIML, Mangayarkarasi College of Engineering</p>
+    <p class="footer-note">Built by the QEVRA Fest web team.</p>
+  </footer>
+</body>
+</html>
