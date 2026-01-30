@@ -575,6 +575,57 @@ main {
   position: relative;
   overflow: hidden;
 }
+/* Detailed event cards on day pages */
+.event-detail-card {
+  margin-top: 1rem;
+  border-radius: 1rem;
+  padding: 1rem 1rem 0.8rem;
+  background: rgba(248, 250, 252, 0.98);
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  box-shadow: 0 18px 40px rgba(148, 163, 184, 0.5);
+}
+
+.event-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.event-detail-title {
+  font-size: 1rem;
+  color: #020617;
+}
+
+.event-detail-body {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+}
+
+.event-detail-row h5 {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #6b7280;
+  margin-bottom: 0.15rem;
+}
+
+.event-detail-row p {
+  font-size: 0.88rem;
+  color: #111827;
+  min-height: 1.3rem; /* keeps rows aligned even when empty */
+}
+
+/* Stack detail rows on small screens */
+@media (max-width: 640px) {
+  .event-detail-body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 
 .day-label {
   font-
