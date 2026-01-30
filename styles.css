@@ -21,6 +21,10 @@ body {
   overflow-x: hidden;
 }
 
+:root {
+  --frame-bg: rgba(248, 250, 252, 0.9);
+}
+
 /* Animated abstract background */
 .bg-orbit {
   position: fixed;
@@ -92,7 +96,7 @@ body {
   top: 0;
   z-index: 20;
   backdrop-filter: blur(18px);
-  background: rgba(248, 250, 252, 0.8);
+  background: var(--frame-bg);
   border-bottom: 1px solid rgba(148, 163, 184, 0.4);
 }
 
@@ -200,12 +204,12 @@ main {
 }
 
 .hero {
-  display: grid;
-  grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+  display: flex;
   align-items: center;
-  gap: 2.5rem;
+  justify-content: center;
+  text-align: center;
   margin-top: 1.5rem;
-  padding: 1.8rem 1.6rem;
+  padding: 2.5rem 1.6rem;
   border-radius: 1.5rem;
   background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), transparent 55%),
     radial-gradient(circle at bottom right, rgba(34, 197, 94, 0.12), rgba(248, 250, 252, 0.96) 60%);
@@ -213,6 +217,7 @@ main {
   box-shadow: 0 25px 60px rgba(148, 163, 184, 0.5);
   position: relative;
   overflow: hidden;
+  min-height: 50vh;
 }
 
 .hero::after {
@@ -228,6 +233,7 @@ main {
 .hero-content {
   position: relative;
   z-index: 1;
+  max-width: 640px;
 }
 
 .hero-badge {
@@ -266,10 +272,11 @@ main {
 }
 
 .hero-cta-row {
-  margin-top: 1.2rem;
+  margin-top: 1.4rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
+  justify-content: center;
 }
 
 /* Glitch text effect */
@@ -318,106 +325,6 @@ main {
   }
   100% {
     clip-path: inset(12% 0 65% 0);
-  }
-}
-
-/* Orbit card */
-.hero-orbit-card {
-  position: relative;
-  z-index: 1;
-  border-radius: 1.25rem;
-  border: 1px solid rgba(148, 163, 184, 0.5);
-  background: radial-gradient(circle at top, rgba(248, 250, 252, 0.98), rgba(226, 232, 240, 0.98));
-  padding: 1.4rem 1.3rem;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-}
-
-.orbit-ring {
-  position: absolute;
-  border-radius: 999px;
-  border: 1px dashed rgba(148, 163, 184, 0.7);
-  animation: spin 20s linear infinite;
-}
-
-.ring-1 {
-  width: 180px;
-  height: 180px;
-  border-style: solid;
-  border-color: rgba(56, 189, 248, 0.7);
-}
-
-.ring-2 {
-  width: 230px;
-  height: 230px;
-  animation-duration: 26s;
-  border-color: rgba(52, 211, 153, 0.7);
-}
-
-.ring-3 {
-  width: 280px;
-  height: 280px;
-  animation-duration: 34s;
-  border-style: dotted;
-  border-color: rgba(15, 23, 42, 0.25);
-}
-
-.orbit-core {
-  position: relative;
-  z-index: 2;
-  width: 82px;
-  height: 82px;
-  border-radius: 999px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.05rem;
-  background: radial-gradient(circle at 30% 0%, #22c55e, #0f172a);
-  color: #f8fafc;
-  box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.7), 0 0 40px rgba(34, 197, 94, 0.9);
-}
-
-.orbit-core span {
-  font-size: 0.85rem;
-  letter-spacing: 0.16em;
-}
-
-.orbit-core small {
-  font-size: 0.7rem;
-  opacity: 0.85;
-}
-
-.orbit-label {
-  position: absolute;
-  font-size: 0.8rem;
-  color: #020617;
-  padding: 0.25rem 0.5rem;
-  border-radius: 999px;
-  background: rgba(248, 250, 252, 0.98);
-  border: 1px solid rgba(148, 163, 184, 0.8);
-  box-shadow: 0 10px 30px rgba(148, 163, 184, 0.6);
-}
-
-.orbit-label-1 {
-  top: 12%;
-  left: 10%;
-}
-
-.orbit-label-2 {
-  bottom: 10%;
-  right: 6%;
-}
-
-.orbit-label-3 {
-  top: 60%;
-  left: 75%;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
   }
 }
 
@@ -730,7 +637,7 @@ main {
   text-align: center;
   font-size: 0.8rem;
   color: #6b7280;
-  background: rgba(248, 250, 252, 0.9);
+  background: var(--frame-bg);
 }
 
 .footer-note {
@@ -738,21 +645,13 @@ main {
   color: #9ca3af;
 }
 
-/* Simple tilt effect (non-library) */
+/* Simple tilt effect */
 [data-tilt] {
   will-change: transform;
 }
 
 /* Responsive */
 @media (max-width: 960px) {
-  .hero {
-    grid-template-columns: minmax(0, 1.5fr);
-  }
-
-  .hero-orbit-card {
-    margin-top: 1.2rem;
-  }
-
   .days-grid,
   .events-grid,
   .coord-grid {
