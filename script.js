@@ -1,5 +1,6 @@
-// Replace these with your actual Google Form URLs
+// Main + per-day registration links
 const REGISTRATION_LINKS = {
+  home: "YOUR_MAIN_REGISTRATION_FORM_LINK",
   day1: "YOUR_GOOGLE_FORM_LINK_FOR_DAY1",
   day2: "YOUR_GOOGLE_FORM_LINK_FOR_DAY2",
   day3: "YOUR_GOOGLE_FORM_LINK_FOR_DAY3"
